@@ -57,7 +57,7 @@ export default function Footer() {
               Ready to build your resume?
             </h3>
             <p className="text-slate-400 text-sm mt-1 font-medium">
-              Join 50,000+ professionals. Free to start, no credit card
+              Join 50+ professionals. Free to start, no credit card
               required.
             </p>
           </div>

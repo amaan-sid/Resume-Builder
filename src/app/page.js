@@ -120,7 +120,7 @@ function HeroSection() {
               className="btn-pill text-xs mb-8"
             >
               <Zap className="w-3.5 h-3.5" />
-              <span>Trusted by 50,000+ job seekers</span>
+              <span>Trusted by 50+ job seekers</span>
             </motion.div>
 
             {/* Headline */}
@@ -169,7 +169,7 @@ function HeroSection() {
               className="grid grid-cols-3 gap-8"
             >
               {[
-                { value: "50K+", label: "Resumes Created" },
+                { value: "50+", label: "Resumes Created" },
                 { value: "95%", label: "ATS Pass Rate" },
                 { value: "4.9", label: "User Rating", icon: true },
               ].map((stat) => (
@@ -269,53 +269,6 @@ function HeroSection() {
   );
 }
 
-/* ============================================================
-   LOGO CLOUD
-   ============================================================ */
-function LogoCloud() {
-  const logos = [
-    "Forbes",
-    "TechCrunch",
-    "Product Hunt",
-    "G2",
-    "Capterra",
-    "Y Combinator",
-    "Inc Magazine",
-    "Fast Company",
-  ];
-
-  // Triple logos for ultra-smooth seamless loop
-  const tripleLogos = [...logos, ...logos, ...logos];
-
-  return (
-    <section className="py-12 bg-[var(--c-bg-secondary)] border-y-3 border-[var(--c-border)] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-        <p className="text-center text-xs text-[var(--c-text-muted)] tracking-widest uppercase font-bold">
-          As featured in
-        </p>
-      </div>
-      <div className="relative">
-        {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[var(--c-bg-secondary)] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[var(--c-bg-secondary)] to-transparent z-10 pointer-events-none" />
-
-        {/* Scrolling track */}
-        <div className="marquee-track">
-          {tripleLogos.map((name, i) => (
-            <div
-              key={`${name}-${i}`}
-              className="flex-shrink-0 mx-10 lg:mx-16 px-6 py-3 bg-white/60 border-2 border-[var(--c-border)] shadow-[2px_2px_0_var(--c-border)] hover:shadow-[3px_3px_0_var(--c-border)] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200 cursor-default group"
-            >
-              <span className="text-[var(--c-text-primary)] font-black text-base lg:text-lg tracking-tight select-none group-hover:text-[var(--c-accent)] transition-colors">
-                {name}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ============================================================
    FEATURES SECTION
@@ -892,8 +845,8 @@ function HowItWorksSection() {
    ============================================================ */
 function StatsBar() {
   const stats = [
-    { icon: Users, value: "50,000+", label: "Active Users" },
-    { icon: FileText, value: "120,000+", label: "Resumes Created" },
+    { icon: Users, value: "50+", label: "Active Users" },
+    { icon: FileText, value: "50+", label: "Resumes Created" },
     { icon: Award, value: "95%", label: "ATS Pass Rate" },
     { icon: BarChart3, value: "62%", label: "Interview Rate" },
   ];
@@ -1030,7 +983,7 @@ function CTASection() {
             <span className="text-[var(--c-yellow)]">Perfect Resume?</span>
           </h2>
           <p className="text-lg text-slate-400 mb-10 max-w-xl mx-auto leading-relaxed font-medium">
-            Join 50,000+ professionals who&apos;ve already created their winning
+            Join 50+ professionals who&apos;ve already created their winning
             resume with CAPSLOQUE. Free to start, no credit card required.
           </p>
           <Link href="/builder">
@@ -1057,7 +1010,6 @@ export default function HomePage() {
     <main className="overflow-hidden">
       <LandingNavbar />
       <HeroSection />
-      <LogoCloud />
       <FeaturesSection />
       <ShowcaseSection />
       <TemplatesSection />
